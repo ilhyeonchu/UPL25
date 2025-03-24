@@ -1,0 +1,19 @@
+# dune exec ./tes.exe
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /Users/chu-ilhyeon/.cache/dune/db
+# Workspace root: /Users/chu-ilhyeon/upl25/prac
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /Users/chu-ilhyeon/.opam/default/bin/ocamlc.opt -config > /var/folders/6_/zfg7_zn15d72p5xvrw9trjkw0000gn/T/dune_dedb6b_output
+$ (cd _build/default && /Users/chu-ilhyeon/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I .tes.eobjs/byte -no-alias-deps -opaque -o .tes.eobjs/byte/dune__exe__Tes.cmo -c -impl tes.ml)
+$ (cd _build/default && /Users/chu-ilhyeon/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I .tes.eobjs/byte -I .tes.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -o .tes.eobjs/native/dune__exe__Tes.cmx -c -impl tes.ml)
+$ (cd _build/default && /Users/chu-ilhyeon/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o tes.exe .tes.eobjs/native/dune__exe__Tes.cmx)

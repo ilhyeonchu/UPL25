@@ -1,0 +1,16 @@
+# dune runtest
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /Users/chu-ilhyeon/.cache/dune/db
+# Workspace root: /Users/chu-ilhyeon/upl25/hw02
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /Users/chu-ilhyeon/.opam/default/bin/ocamlc.opt -config > /var/folders/6_/zfg7_zn15d72p5xvrw9trjkw0000gn/T/dune_7bb755_output
