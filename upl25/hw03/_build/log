@@ -1,0 +1,23 @@
+# dune runtest
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /Users/chu-ilhyeon/.cache/dune/db
+# Workspace root: /Users/chu-ilhyeon/UPL25/upl25/hw03
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /Users/chu-ilhyeon/.opam/default/bin/ocamlc.opt -config > /var/folders/6_/zfg7_zn15d72p5xvrw9trjkw0000gn/T/dune_ec5b43_output
+$ (cd _build/default && .hw2_test.inline-tests/inline_test_runner_hw2_test.exe inline-test-runner hw2_test -partition hw3_example_test.ml -source-tree-root . -diff-cmd -)
+> File "hw3_example_test.ml", line 13, characters 0-90: <<(Hw3.parse "let x = 1 in 4 + x") =   (LetIn ([...]>> threw (Failure "Parsing error: let x = 1 in 4 + x").
+>   Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
+>   Called from Hw2_test__Hw3_example_test.(fun) in file "hw3_example_test.ml", line 13, characters 13-43
+>
+> FAILED 1 / 4 tests
+[2]
