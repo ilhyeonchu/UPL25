@@ -1,13 +1,13 @@
 (include_subdirs unqualified)
 
 
-;(executable
-;  (name helloworld))
+(executable
+  (name helloworld))
 
-(library
-  (name foo_test)
-  (inline_tests)
-  (preprocess (pps ppx_inline_test)))
+;(library
+  ;(name foo_test)
+  ;(inline_tests)
+  ;(preprocess (pps ppx_inline_test)))
   ;(name foo)
   ;(modules foo))
 
