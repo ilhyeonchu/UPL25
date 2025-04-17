@@ -1,3 +1,7 @@
+type t = (string * (string list * Ast.expr)) list
+
+let empty : t = []
+
 (* find : string -> t -> string list * Ast.expr *)
 let rec find (st: string) (t: Fstore.t) : (string list * Ast.expr) =
   match t with
