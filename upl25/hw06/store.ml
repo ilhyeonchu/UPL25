@@ -16,8 +16,8 @@ let add (st: string) (vl: value) (mem: t) : t =
   let mem' = List.remove_assq st mem in 
     (st, vl) :: mem'
 
-let rec add' (stl: stirng list) (vl: value list) (mem: t) : t =
+let rec add' (stl: string list) (vl: value list) (mem: t) : t =
   match (stl, vl) with
     | (stlh::stlt, vlh::vlt) -> add' stlt vlt (add stlh vlh mem)
     | ([], []) -> mem
-    | _ -> failwith 
+    | (_, _) -> failwith " "

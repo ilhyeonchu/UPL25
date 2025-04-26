@@ -1,0 +1,6 @@
+(include_subdirs unqualified)
+
+(library
+  (name hw7_test)
+  (inline_tests)
+  (preprocess (pps ppx_inline_test)))
