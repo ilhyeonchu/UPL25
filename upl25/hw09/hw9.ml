@@ -18,4 +18,12 @@ let rec interp (ast: Ast.expr) (mem: Store.t) : Store.value =
         | _, _ -> failwith (Format.asprintf "Not a function: %a" Ast.pp e1))
     | Lambda (st, e2) -> 
         ClosureV (st, e2, mem)
+    | Cond (exprbool, exprture, exprfal) ->
+      (match (interp exprbool mem) with
+        | BoolV bo -> if bo = true then interp exprture mem else interp exprfal mem
+        | _ -> failwith (Format.asprintf "Not a bool: %a" Ast.pp exprbool))
+    | LessThan (e1, e2) -> 
+      match (interp e1 mem, interp e2 mem) with
+        | NumV n1, NumV n2 -> if n1 < n2 then BoolV true else BoolV false
+        | _, _ -> failwith (Format.asprintf "Not a number: %a < %a" Ast.pp e1 Ast.pp e2)
 

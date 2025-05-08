@@ -1,6 +1,15 @@
 (include_subdirs unqualified)
 
 (library
-  (name hw9_test)
+  (name hw9)
+  (modules hw9 store ast)
+  (instrumentation (backend bisect_ppx))
+)
+
+(library
+  (name coverage_test)
   (inline_tests)
-  (preprocess (pps ppx_inline_test)))
+  (modules coverage_test)
+  (libraries hw9)
+  (preprocess (pps ppx_inline_test))
+)

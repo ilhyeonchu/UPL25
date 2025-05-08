@@ -1,6 +1,7 @@
 type value = 
   | NumV of int
   | ClosureV of string * Ast.expr * t 
+  | BoolV of bool
 and t = (string * value) list
 
 let empty: t = []
